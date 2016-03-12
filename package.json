@@ -1,0 +1,17 @@
+{
+  "name": "node-historypin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "a set of helper methods that make calls to the historypin api",
+  "scripts": {
+    "jshint": "jshint ."
+  },
+  "author": "dan entous",
+  "license": "MIT",
+  "dependencies": {
+    "node-helpers": "git+https://github.com/dan-nl/node-helpers.git"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1"
+  }
+}
