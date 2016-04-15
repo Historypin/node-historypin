@@ -7,7 +7,7 @@ var getRequestOptions;
 var requestHelper;
 
 /**
- * variable assignments
+ * module dependencies
  */
 getRequestOptions = require( './get-request-options' );
 requestHelper = require( 'node-helpers' ).requestHelper;
@@ -22,12 +22,13 @@ module.exports = function callApi( req, user_options, callback ) {
     throw new Error( 'callback not provided as a Function' );
   }
 
-  requestHelper( getRequestOptions( req, user_options ), true )
+  user_options = user_options || {};
+
+  requestHelper( getRequestOptions( req, user_options ), user_options.debug )
     .then(
       function ( result ) {
         var json;
         json = JSON.parse( result );
-
         callback.call( this, json );
       }
     )
@@ -39,6 +40,4 @@ module.exports = function callApi( req, user_options, callback ) {
         callback.call( this, err );
       }
     );
-
-  return { test: "test" };
 };
