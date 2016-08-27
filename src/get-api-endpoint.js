@@ -27,19 +27,19 @@ module.exports = function getApiEdpoint( user_options ) {
 
   switch ( user_options.api_endpoint ) {
     case 'get-gallery':
-      result = 'https://www.historypin.org/en/api/%s/pin/get_gallery.json';
+      result = 'http://www.historypin.org/en/api/%s/pin/get_gallery.json';
       break;
 
     case 'get-map':
-      result = 'https://www.historypin.org/en/api/%s/pin/get_map.json';
+      result = 'http://www.historypin.org/en/api/%s/pin/get_map.json';
       break;
 
     case 'get-pin':
-      result = 'https://www.historypin.org/en/api/%s/pin/get.json';
+      result = 'http://www.historypin.org/en/api/%s/pin/get.json';
       break;
 
     case 'get-project':
-      result = 'https://www.historypin.org/en/api/%s/projects/get.json';
+      result = 'http://www.historypin.org/en/api/%s/projects/get.json';
       break;
 
     case 'listing':
