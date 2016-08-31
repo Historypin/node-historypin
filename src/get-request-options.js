@@ -1,22 +1,19 @@
 'use strict';
 
 /**
- * module variables
+ * module dependencies
  */
-var getApiEndpoint;
-var getGenericRequestOptions;
-
-/**
- * variable assignments
- */
-getApiEndpoint = require( './get-api-endpoint' );
-getGenericRequestOptions = require( 'node-helpers' ).getGenericRequestOptions;
+var getApiEndpoint = require( './get-api-endpoint' );
+var getGenericRequestOptions = require( 'node-helpers' ).getGenericRequestOptions;
 
 /**
  * @param {IncomingMessage} req
+ *
  * @param {Object} user_options
  * @param {string} user_options.method
- * @returns {*}
+ * @param {string} user_options.qs
+ *
+ * @returns {Object}
  */
 module.exports = function getRequestOptions( req, user_options ) {
   var options;
@@ -25,7 +22,7 @@ module.exports = function getRequestOptions( req, user_options ) {
   options.method = user_options.method || 'get';
   options.url = getApiEndpoint( user_options );
   options = getGenericRequestOptions( req, options, user_options );
-  options.qs = user_options.qs;
+  options.qs = user_options.qs || {};
 
   return options;
 };
