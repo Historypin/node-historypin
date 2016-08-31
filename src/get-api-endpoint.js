@@ -38,7 +38,7 @@ module.exports = function getApiEndpoint( user_options ) {
   result = endpoints[ user_options.api_endpoint ];
 
   if ( typeof result !== 'string' ) {
-    throw new Error( 'getApiEndpoint(): api endpoint `' + user_options.api_endpoint + '` is not yet handled' );
+    throw new Error( 'getApiEndpoint(): api endpoint `%s` is not yet handled'.replace( '%s', user_options.api_endpoint ) );
   }
 
   return result.replace( '%s', user_options.project );

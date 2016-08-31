@@ -175,7 +175,10 @@
     "no-whitespace-before-property": "error",
     "no-with": "error",
     "object-curly-newline": "error",
-    "object-curly-spacing": "error",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
     "object-property-newline": "error",
     "object-shorthand": "error",
     "one-var": "off",
@@ -183,13 +186,16 @@
     "operator-assignment": "error",
     "operator-linebreak": "error",
     "padded-blocks": "off",
-    "prefer-arrow-callback": "error",
+    "prefer-arrow-callback": "off",
     "prefer-const": "error",
     "prefer-reflect": "off",
     "prefer-rest-params": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
-    "quote-props": "error",
+    "quote-props": [
+      "error",
+      "consistent-as-needed"
+    ],
     "quotes": [
       "error",
       "single"

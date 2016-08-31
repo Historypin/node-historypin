@@ -3,15 +3,20 @@
   "version": "1.3.0",
   "private": true,
   "description": "a set of helper methods that make calls to the historypin api",
-  "scripts": {
-    "jshint": "jshint ."
-  },
   "author": "dan entous",
   "license": "MIT",
+  "scripts": {
+    "cover": "istanbul cover _mocha -- -R spec",
+    "eslint": "eslint .",
+    "test": "mocha --recursive"
+  },
   "dependencies": {
-    "node-helpers": "git+https://github.com/dan-nl/node-helpers.git"
+    "node-helpers": "https://github.com/dan-nl/node-helpers.git"
   },
   "devDependencies": {
-    "jshint": "^2.9.1"
+    "chai": "3.5.0",
+    "eslint": "3.4.0",
+    "istanbul": "0.4.5",
+    "mocha": "3.0.2"
   }
 }
