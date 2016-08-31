@@ -1,3 +1,4 @@
+/* globals describe, it */
 'use strict';
 
 /**
@@ -6,10 +7,14 @@
 var expect = require( 'chai' ).expect;
 var getRequestOptions = require( '../src/get-request-options' );
 
+/**
+ * module variables
+ */
+var qs = require( './fixtures/qs' );
+var req = require( './fixtures/req' );
+var user_options = require( './fixtures/user-options' );
+
 describe( 'getRequestOptions( req, user_options )', function () {
-  var qs = require( './fixtures/qs' );
-  var req = require('./fixtures/req');
-  var user_options = require( './fixtures/user-options' );
   var request_options = getRequestOptions( req, user_options );
 
   it( 'should return an Object', function () {

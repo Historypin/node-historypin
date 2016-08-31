@@ -1,3 +1,4 @@
+/* globals describe, it */
 'use strict';
 
 /**
@@ -6,9 +7,13 @@
 var expect = require( 'chai' ).expect;
 var getApiPromise = require( '../src/get-api-promise' );
 
+/**
+ * module variables
+ */
+var req = require( './fixtures/req.json' );
+var user_options = require( './fixtures/user-options.json' );
+
 describe( 'getApiPromise( req, user_options )', function () {
-  var req = require( './fixtures/req.json' );
-  var user_options = require( './fixtures/user-options.json' );
 
   it( 'should return a Promise like Object', function () {
     var ApiPromise = getApiPromise( req, user_options );
