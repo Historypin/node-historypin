@@ -14,22 +14,29 @@ requestHelper = require( 'node-helpers' ).requestHelper;
 
 /**
  * @param {IncomingMessage} req
+ *
  * @param {Object} user_options
+ * @param {string} user_options.api_endpoint
+ * @param {string} user_options.project
+ * @param {boolean} [user_options.debug]
+ * @param {string} [user_options.method]
+ * @param {Object} [user_options.qs]
+ *
  * @param {Function} callback
+ *
+ * @throws {Error}
  */
 module.exports = function callApi( req, user_options, callback ) {
   if ( !( callback instanceof Function ) ) {
-    throw new Error( 'callback not provided as a Function' );
+    throw new Error( 'callApi(): callback not provided as a Function' );
   }
-
-  user_options = user_options || {};
 
   requestHelper( getRequestOptions( req, user_options ), user_options.debug )
     .then(
       function ( result ) {
         var json;
         json = JSON.parse( result );
-        callback.call( this, json );
+        callback.call( this, null, json );
       }
     )
     .catch(
