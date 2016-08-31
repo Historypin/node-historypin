@@ -10,8 +10,10 @@ var getGenericRequestOptions = require( 'node-helpers' ).getGenericRequestOption
  * @param {IncomingMessage} req
  *
  * @param {Object} user_options
- * @param {string} user_options.method
- * @param {string} user_options.qs
+ * @param {string} user_options.api_endpoint
+ * @param {string} [user_options.method]
+ * @param {string} user_options.project
+ * @param {string} [user_options.qs]
  *
  * @returns {Object}
  */
