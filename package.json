@@ -1,6 +1,6 @@
 {
   "name": "node-historypin",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "private": true,
   "description": "a set of helper methods that make calls to the historypin api",
   "author": "dan entous",
