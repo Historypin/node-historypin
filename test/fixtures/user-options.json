@@ -1,0 +1,6 @@
+'use strict';
+
+module.exports = {
+  api_endpoint: 'get-map',
+  project: 'test'
+};
