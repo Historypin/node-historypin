@@ -19,7 +19,7 @@ describe( 'getApiEndpoint( user_options )', function () {
     expect( url ).to.equal( 'https://www.historypin.org/en/api/test/pin/get_map.json' );
   } );
 
-  describe( 'should throw an error', function () {
+  describe( 'should throw an Error', function () {
     it( 'if user_options is not an Object', function () {
       expect( getApiEndpoint ).to.throw( 'getApiEndpoint(): user_options not provided as an Object' );
     } );
