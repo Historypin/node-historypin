@@ -6,10 +6,10 @@
   "author": "dan entous",
   "license": "MIT",
   "scripts": {
-    "cover": "istanbul cover _mocha -- -R spec",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "eslint": "eslint .",
-    "test": "mocha --recursive"
+    "mocha": "mocha --recursive",
+    "test": "istanbul cover _mocha -- -R spec"
   },
   "dependencies": {
     "node-helpers": "https://github.com/dan-nl/node-helpers.git"
