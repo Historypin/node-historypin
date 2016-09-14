@@ -1,7 +1,5 @@
-{
+module.exports = {
   "env": {
-    "browser": true,
-    "commonjs": true,
     "node": true
   },
   "extends": "eslint:recommended",
@@ -26,16 +24,19 @@
         "before": false
       }
     ],
-    "comma-style": "error",
+    "comma-style": [
+      "error",
+      "last"
+    ],
     "complexity": "error",
     "computed-property-spacing": [
       "error",
       "always"
     ],
-    "consistent-return": "off",
+    "consistent-return": "error",
     "consistent-this": "error",
     "curly": "error",
-    "default-case": "off",
+    "default-case": "error",
     "dot-location": [
       "error",
       "property"
@@ -46,11 +47,14 @@
         "allowKeywords": true
       }
     ],
-    "eol-last": "off",
+    "eol-last": "error",
     "eqeqeq": "error",
     "func-call-spacing": "error",
     "func-names": "off",
-    "func-style": "error",
+    "func-style": [
+      "error",
+      "expression"
+    ],
     "generator-star-spacing": "error",
     "global-require": "error",
     "guard-for-in": "error",
@@ -58,22 +62,18 @@
     "id-blacklist": "error",
     "id-length": "error",
     "id-match": "error",
-    "indent": [
-      "error",
-      2,
-      {
-        "SwitchCase": 1
-      }
-    ],
+    "indent": "off",
     "init-declarations": "off",
     "jsx-quotes": "error",
     "key-spacing": "error",
     "keyword-spacing": "error",
+    "line-comment-position": "error",
     "linebreak-style": [
       "error",
       "unix"
     ],
     "lines-around-comment": "off",
+    "lines-around-directive": "off",
     "max-depth": "error",
     "max-len": "off",
     "max-lines": "error",
@@ -85,7 +85,7 @@
     "new-cap": "error",
     "new-parens": "error",
     "newline-after-var": "off",
-    "newline-before-return": "off",
+    "newline-before-return": "error",
     "newline-per-chained-call": "error",
     "no-alert": "error",
     "no-array-constructor": "error",
@@ -110,7 +110,7 @@
     "no-implicit-globals": "error",
     "no-implied-eval": "error",
     "no-inline-comments": "error",
-    "no-invalid-this": "off",
+    "no-invalid-this": "error",
     "no-iterator": "error",
     "no-label-var": "error",
     "no-labels": "error",
@@ -131,7 +131,7 @@
     "no-new-require": "error",
     "no-new-wrappers": "error",
     "no-octal-escape": "error",
-    "no-param-reassign": "off",
+    "no-param-reassign": "error",
     "no-path-concat": "error",
     "no-plusplus": "error",
     "no-process-env": "error",
@@ -141,6 +141,7 @@
     "no-restricted-globals": "error",
     "no-restricted-imports": "error",
     "no-restricted-modules": "error",
+    "no-restricted-properties": "error",
     "no-restricted-syntax": "error",
     "no-return-assign": "error",
     "no-script-url": "error",
@@ -161,7 +162,7 @@
     "no-unmodified-loop-condition": "error",
     "no-unneeded-ternary": "error",
     "no-unsafe-negation": "error",
-    "no-unused-expressions": "error",
+    "no-unused-expressions": "off",
     "no-use-before-define": "error",
     "no-useless-call": "error",
     "no-useless-computed-key": "error",
@@ -188,14 +189,12 @@
     "padded-blocks": "off",
     "prefer-arrow-callback": "off",
     "prefer-const": "error",
-    "prefer-reflect": "off",
+    "prefer-numeric-literals": "error",
+    "prefer-reflect": "error",
     "prefer-rest-params": "error",
     "prefer-spread": "error",
-    "prefer-template": "error",
-    "quote-props": [
-      "error",
-      "consistent-as-needed"
-    ],
+    "prefer-template": "off",
+    "quote-props": "off",
     "quotes": [
       "error",
       "single"
@@ -206,7 +205,10 @@
     "semi": "error",
     "semi-spacing": "error",
     "sort-imports": "error",
-    "sort-keys": "error",
+    "sort-keys": [
+      "error",
+      "asc"
+    ],
     "sort-vars": "error",
     "space-before-blocks": "error",
     "space-before-function-paren": "off",
@@ -216,7 +218,10 @@
     ],
     "space-infix-ops": "error",
     "space-unary-ops": "error",
-    "spaced-comment": "error",
+    "spaced-comment": [
+      "error",
+      "always"
+    ],
     "strict": "error",
     "symbol-description": "error",
     "template-curly-spacing": "error",
@@ -233,4 +238,4 @@
       "never"
     ]
   }
-}
+};

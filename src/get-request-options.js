@@ -4,27 +4,21 @@
  * module dependencies
  */
 var getApiEndpoint = require( './get-api-endpoint' );
-var getGenericRequestOptions = require( 'node-helpers' ).getGenericRequestOptions;
+var getGenericRequestOptions = require( 'generic-request-options' );
 
 /**
- * @param {IncomingMessage} req
- *
  * @param {Object} user_options
- * @param {string} user_options.api_endpoint
- * @param {string} [user_options.method]
- * @param {string} user_options.project
- * @param {string} [user_options.qs]
+ * @param {Object} [request_headers]
  *
  * @returns {Object}
  */
-module.exports = function getRequestOptions( req, user_options ) {
-  var options;
+module.exports = function getRequestOptions( user_options, request_headers ) {
+  var options = getGenericRequestOptions( user_options, request_headers );
 
-  options = {};
   options.method = user_options.method || 'get';
-  options.url = getApiEndpoint( user_options );
-  options = getGenericRequestOptions( req, options, user_options );
   options.qs = user_options.qs || {};
+  options.data = user_options.data || {};
+  options.url = getApiEndpoint( user_options );
 
   return options;
 };

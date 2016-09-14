@@ -13,11 +13,7 @@ var endpoints = {
 
 /**
  * @param {Object} user_options
- * @param {string} user_options.api_endpoint
- * @param {string} user_options.project
- *
  * @throws {Error}
- *
  * @returns {string|undefined}
  */
 module.exports = function getApiEndpoint( user_options ) {

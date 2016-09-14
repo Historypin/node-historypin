@@ -24,7 +24,8 @@
     "test": "mocha"
   },
   "dependencies": {
-    "node-helpers": "https://github.com/dan-nl/node-helpers.git"
+    "generic-request-options": "1.1.4",
+    "request-as-bluebird": "2.0.0"
   },
   "devDependencies": {
     "chai": "3.5.0",
