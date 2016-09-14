@@ -1,10 +1,22 @@
 {
   "name": "node-historypin",
   "version": "2.0.1",
-  "private": true,
-  "description": "a set of helper methods that make calls to the historypin api",
+  "description": "historypin api helper methods",
   "author": "dan entous",
   "license": "MIT",
+  "main": "src",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Historypin/node-historypin.git"
+  },
+  "keywords": [
+    "historypin",
+    "historypin api"
+  ],
+  "bugs": {
+    "url": "https://github.com/Historypin/node-historypin/issues"
+  },
+  "homepage": "https://github.com/Historypin/node-historypin#readme",
   "scripts": {
     "cover": "istanbul cover _mocha -- -R spec",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
@@ -17,7 +29,7 @@
   "devDependencies": {
     "chai": "3.5.0",
     "coveralls": "2.11.12",
-    "eslint": "3.4.0",
+    "eslint": "3.5.0",
     "istanbul": "0.4.5",
     "mocha": "3.0.2"
   }
